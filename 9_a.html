@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+  <title>Factorial and Fibonacci</title>
+</head>
+<body>
+  <h2>Factorial and Fibonacci</h2>
+  <label>Enter a number:</label>
+  <input type="number" id="num" />
+  <button onclick="showResults()">Calculate</button>
+
+  <h3>Results:</h3>
+  <div id="factorialResult"></div>
+  <div id="fibonacciResult"></div>
+
+  <script>
+    // Function to calculate factorial
+    function factorial(n) {
+      let result = 1;
+      for (let i = 1; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    }
+
+    // Function to generate Fibonacci series
+    function fibonacci(n) {
+      let series = [];
+      let a = 0, b = 1;
+      while (a <= n) {
+        series.push(a);
+        let next = a + b;
+        a = b;
+        b = next;
+      }
+      return series;
+    }
+
+    // Function to display results
+    function showResults() {
+      const num = parseInt(document.getElementById("num").value);
+
+      if (isNaN(num) || num < 0) {
+        alert("Please enter a valid positive number");
+        return;
+      }
+
+      // Display factorial
+      document.getElementById("factorialResult").innerText = 
+        "Factorial of " + num + " = " + factorial(num);
+
+      // Display Fibonacci series
+      document.getElementById("fibonacciResult").innerText = 
+        "Fibonacci series up to " + num + ": " + fibonacci(num).join(", ");
+    }
+  </script>
+</body>
+</html>

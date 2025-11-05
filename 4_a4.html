@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Pseudo element selector</title>
+    <style>
+      h1::before{
+        content: "👉";
+      }
+      h1::after{
+        content: "✅";
+      }
+      p::first-letter{
+        color:red;
+      }
+      p::first-line{
+        color: blue;
+      }
+    </style>
+    </head>
+    <body>
+      <h1>Pseudo element Selector</h1>
+      <p>
+        Pseudo-element selectors in HTML (used with CSS) allow you to style specific parts of an element 
+        without changing the actual HTML content. They are especially useful for adding decorative or functional effects.
+         For example, ::before and ::after let you insert content before or after an element. Other pseudo-elements like 
+         ::first-letter and ::first-line are used to style only the first letter or the first line of a paragraph. These 
+         selectors help enhance the appearance of a webpage with minimal effort.
+      </p>
+    </body>
+</html>

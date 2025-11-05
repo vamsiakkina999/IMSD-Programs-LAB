@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Example</title>
+</head>
+<body>
+<h2>Student Object Demo</h2>
+<button onclick="createStudent()">Create and Display Student</button>
+<p id="output"></p>
+<script>
+  // Constructor function for a Student object
+  function Student(name, age, course) {
+    // Properties
+    this.name = name;
+    this.age = age;
+    this.course = course;
+
+    // Accessor: Getter for course
+    this.getCourse = function() {
+      return this.course;
+    };
+
+    // Accessor: Setter for course
+    this.setCourse = function(newCourse) {
+      this.course = newCourse;
+    };
+    // Method to display student details
+    this.display = function() {
+      return `Name: ${this.name} <br> Age: ${this.age} <br> Course: ${this.course}`;
+    };
+  }
+
+  // Function to create object and interact with it
+  function createStudent() {
+    // Creating object using constructor
+    let student1 = new Student("John Doe", 20, "Computer Science");
+
+    // Update course using setter
+    student1.setCourse("Data Science");
+
+    // Display using method
+    document.getElementById("output").innerHTML = `
+      <strong>Student Details:</strong><br> ${student1.display()}<br><br>
+      <strong>Access Course using Getter:</strong> ${student1.getCourse()} `;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fixed Flipped Background Example</title>
+  <style>
+    body {
+      margin: 0;
+      height: 200vh; /* Makes the page scrollable */
+    }
+    .background {
+      position: fixed;
+      top: 20%;     /* Halfway down the page */
+      left: 0;
+      width: 100%;
+      height: 200px; /* Adjust as needed */
+      background-image:url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-118143566.jpg');
+      background-repeat:repeat;
+      background-size:cover;
+      background-position:center;
+      transform: rotate(-15deg); /* Flip horizontally */
+      z-index: -1; /* Place behind content */
+      
+    }
+    .content {
+      padding: 50px;
+      font-size: 20px;
+    }
+    
+    .vtext{
+      writing-mode:vertical-rl;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="content">
+    <h1 class="vtext">Scroll Down</h1>
+    <p>This is an example page with a background image fixed halfway down and flipped horizontally.</p>
+    <p>Keep scrolling to see the background image stay in place.</p>
+    <p>To tilt an image horizontally you can either flip it (mirror across the vertical axis) or rotate it slightly for a tilted look. Use CSS transform — scaleX(-1) for a horizontal flip, rotate() for a 2D tilt, or rotateX() for a 3D tilt effect. Adjust transform-origin and transition for smoother results.</p>
+  </div>
+</body>
+</html>
+

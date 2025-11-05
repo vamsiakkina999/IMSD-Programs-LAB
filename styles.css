@@ -1,0 +1,7 @@
+.external-paragraph {
+  font-size: 18px;
+  color: darkred;
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-left: 4px solid red;
+}

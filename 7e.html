@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Demo</title>
+  <script>
+    function showStringOperations() {
+      let text = "  JavaScript is Powerful!  ";
+
+      // String Properties & Methods
+      let length = text.length;
+      let trimmed = text.trim();
+      let upper = text.toUpperCase();
+      let lower = text.toLowerCase();
+      let char = text.charAt(5);
+      let index = text.indexOf("Powerful");
+      let includes = text.includes("Script");
+      let replaced = text.replace("Powerful", "Amazing");
+      let sliced = text.slice(2, 12);
+      let sub = text.substring(2, 12);
+      let split = text.trim().split(" "); // split into words
+
+      // Output results
+      document.getElementById("original").innerText = "Original Text: '" + text + "'";
+      document.getElementById("length").innerText = "Length: " + length;
+      document.getElementById("trimmed").innerText = "Trimmed: '" + trimmed + "'";
+      document.getElementById("upper").innerText = "Uppercase: " + upper;
+      document.getElementById("lower").innerText = "Lowercase: " + lower;
+      document.getElementById("char").innerText = "Character at index 5: '" + char + "'";
+      document.getElementById("index").innerText = "Index of 'Powerful': " + index;
+      document.getElementById("includes").innerText = "Includes 'Script': " + includes;
+      document.getElementById("replace").innerText = "Replace 'Powerful' with 'Amazing': " + replaced;
+      document.getElementById("slice").innerText = "Slice (2,12): " + sliced;
+      document.getElementById("substring").innerText = "Substring (2,12): " + sub;
+      document.getElementById("split").innerText = "Split into words: " + split.join(" | ");
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript String Object Demo</h2>
+  <button onclick="showStringOperations()">Run String Operations</button>
+  <p id="original"></p>
+  <p id="length"></p>
+  <p id="trimmed"></p>
+  <p id="upper"></p>
+  <p id="lower"></p>
+  <p id="char"></p>
+  <p id="index"></p>
+  <p id="includes"></p>
+  <p id="replace"></p>
+  <p id="slice"></p>
+  <p id="substring"></p>
+  <p id="split"></p>
+</body>
+</html>

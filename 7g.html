@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Demo</title>
+</head>
+<body>
+<h2>JavaScript Date Object Example</h2>
+<button onclick="showDateInfo()">Show Current Date Info</button>
+<p id="output"></p>
+<script>
+  function showDateInfo() {
+    // Create a Date object representing the current date and time
+    let currentDate = new Date();
+    // Using Date object methods
+    let fullDate = currentDate.toDateString();       // Returns date string
+    let time = currentDate.toTimeString();           // Returns time string
+    let year = currentDate.getFullYear();            // Returns full year (e.g., 2025)
+    let month = currentDate.getMonth();              // Returns month (0-11)
+    let date = currentDate.getDate();                // Returns day of the month (1-31)
+    let day = currentDate.getDay();                  // Returns day of the week (0-6)
+    let hours = currentDate.getHours();              // Returns current hour (0-23)
+    let minutes = currentDate.getMinutes();          // Returns current minutes (0-59)
+    let seconds = currentDate.getSeconds();          // Returns current seconds (0-59)
+    let milliseconds = currentDate.getMilliseconds();// Returns milliseconds (0-999)
+    let timezoneOffset = currentDate.getTimezoneOffset(); // Minutes difference from UTC
+    document.getElementById("output").innerHTML = `
+      <strong>Full Date:</strong> ${fullDate} <br>
+      <strong>Time:</strong> ${time} <br>
+      <strong>Year:</strong> ${year} <br>
+      <strong>Month (0-based):</strong> ${month} <br>
+      <strong>Date:</strong> ${date} <br>
+      <strong>Day of Week (0=Sun):</strong> ${day} <br>
+      <strong>Hours:</strong> ${hours} <br>
+      <strong>Minutes:</strong> ${minutes} <br>
+      <strong>Seconds:</strong> ${seconds} <br>
+      <strong>Milliseconds:</strong> ${milliseconds} <br>
+      <strong>Timezone Offset (in mins):</strong> ${timezoneOffset}
+    `;
+  }
+</script>
+</body>
+</html>

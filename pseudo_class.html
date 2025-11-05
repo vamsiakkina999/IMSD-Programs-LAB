@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <style>
+            .form1{
+                border: 5px solid gray;
+                margin: 20px auto;
+                width: 30%;
+            }
+            .item{
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
+            input[type="submit"]:hover{
+                background-color: green;
+            }
+            input[type="reset"]:hover{
+                background-color: red;
+            }
+            .item1{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 20px 20px ;
+            }
+            
+          </style>
+    </head>
+    <body>
+        <div class="form1">
+        <h1 style="text-align: center;">Login Form</h1>
+        <form action="">
+            <div class="item">
+                <input type="text" name="uname" placeholder="Enter your name" required/>
+            </div>
+            <div class="item">
+                <input type="password" name="pwd" placeholder="Enter your password" required/>
+            </div>
+            <div class="item1">
+                <input type="submit" value="login"/>
+                <input type="reset" value="clear"/>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

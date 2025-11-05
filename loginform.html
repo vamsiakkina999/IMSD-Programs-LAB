@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+      /* Center the container vertically and horizontally */
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      form {
+        border: 2px solid black;
+        padding: 30px 40px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        min-width: 280px;
+      }
+      form h1 {
+        text-align: center;
+        margin: 0 0 20px 0;
+      }
+      form div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      form input[type="submit"],
+      form input[type="reset"] {
+        width: 48%;
+        padding: 8px;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h1>User Login Form</h1>
+      <div>
+        <label for="username">UserName:</label>
+        <input type="text" id="username" size="20" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" size="20" required>
+      </div>
+      <div>
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

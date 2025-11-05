@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attribute Selector Demo</title>
+  <style>
+    input[type="text"] {
+      border: 2px solid blue;
+    }
+
+    a[href^="https"] {
+      font-style: italic;
+    }
+
+    input[placeholder*="name"] {
+      background-color: #f0f8ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form Example</h2>
+
+  <input type="text" placeholder="Enter your name"><br><br>
+  <input type="password" placeholder="Enter password"><br><br>
+
+  <a href="https://example.com">Visit Example Site</a><br>
+  <a href="http://othersite.com">Visit Another Site</a>
+
+</body>
+</html>
+

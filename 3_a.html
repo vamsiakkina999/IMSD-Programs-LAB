@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aside as Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header, footer {
+      background-color:blue;
+      color: white;
+      padding: 4px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    nav a{
+      margin-right: 10px;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 400px;
+    }
+
+
+    main {
+      flex: 3;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+
+    aside {
+      /* flex: 1;
+      padding: 20px;
+      background-color: #dfefff; */
+      width: 15%;
+      padding: 15px;
+      margin-left: 25px;
+      float: right;
+      font-style: italic;
+      background-color: #f0f0f0;
+      border-left: 3px solid #0070d0;
+    }
+
+    footer {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <h1>Welcome to My College News Portal</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Departments</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content of the page.</p>
+      
+      <article>
+      <h2>Annual Tech Fest 2025</h2>
+      <section>
+        <p>The Tech Fest 2025 will be held from September 10 to 12. It will include coding contests, robotics, and workshops.</p>
+      </section>
+      <figure>
+        <img src="TECH-FEST.jpg" alt="Tech Fest Banner" width="300">
+        <figcaption>Figure: Tech Fest 2025 Poster</figcaption>
+      </figure>
+    </article>
+    </main>
+
+    <aside>
+      <h3>Sidebar Tips</h3>
+      <p>Use semantic tags for clean HTML structure.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+</body>
+</html>

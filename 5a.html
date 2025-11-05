@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Color Referencing Demo</title>
+  <style>
+    /* 1. Named Color */
+    .named-color {
+      color: blue;
+      background-color: lightgreen;
+    }
+
+    /* 2. Hexadecimal */
+    .hex-color {
+      color: #FF0000; /* Blue */
+      background-color: #F0F0F0;
+    }
+
+    /* 3. RGB */
+    .rgb-color {
+      color: rgb(0, 128, 0); /* Green */
+      background-color: rgb(230 , 230, 250);
+    }
+
+    /* 4. RGBA */
+    .rgba-color {
+      color: rgba(255, 165, 0, 0.9); /* Orange with slight transparency */
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* 5. HSL */
+    .hsl-color {
+      color: hsl(240, 100%, 50%); /* Blue */
+      background-color: hsl(60, 100%, 90%);
+    }
+
+    /* 6. HSLA */
+    .hsla-color {
+      color: hsla(300, 100%, 50%, 0.8); /* Purple with transparency */
+      background-color: hsla(0, 0%, 100%, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h2>Different Ways to Apply Colors in CSS</h2>
+
+  <p class="named-color">This text uses a named color: <strong>blue</strong>.</p>
+  <p class="hex-color">This text uses a hex code: <strong>#FF0000</strong>.</p>
+  <p class="rgb-color">This text uses RGB format: <strong>rgb(0, 128, 0)</strong>.</p>
+  <p class="rgba-color">This text uses RGBA: <strong>rgba(255, 165, 0, 0.9)</strong>.</p>
+  <p class="hsl-color">This text uses HSL: <strong>hsl(240, 100%, 50%)</strong>.</p>
+  <p class="hsla-color">This text uses HSLA: <strong>hsla(300, 100%, 50%, 0.8)</strong>.</p>
+</body>
+</html>

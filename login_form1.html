@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <style>
+           *{
+            margin: 0;
+            padding: 0;
+           }
+
+          button[type="submit"]:hover{
+            background-color:green;
+          }
+           button[type="submit"]{
+            background-color:lightgreen;
+            border: 1px solid green;
+            padding:4px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+          }
+           button[type="reset"]{
+            background-color: pink;
+            border: 1px solid red;
+            padding:4px;
+             margin-bottom: 2px;
+              border-radius: 10px;
+          }
+          button[type="reset"]:hover{
+            background-color: red;
+          }
+           body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background.jpeg') no-repeat ;
+            background-size: cover;
+           }
+           .container{
+            color:yellow;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30%;
+            border:2px solid black;
+            height: 50vh;
+            gap: 20px;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+           box-shadow: 20px 20px 40px rgba(0,0,0,0.4);
+           }
+           input::placeholder{
+            color: white;
+           }
+           .item3{
+            display: flex;
+            justify-content:space-evenly;
+            width: 80%;
+           }
+         .item1, .item2 {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    width: 80%;
+}
+.item1 input, .item2 input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Login Form</h1>
+            <div class="item1">
+                <input type="text" placeholder="username" required>
+            </div>
+            <div class="item2">
+                <input type="password" placeholder="password" min="5" max="10" required>
+            </div>
+            <div class="item3">
+                <button  type="submit">SUBMIT</button>
+                <button  type="reset">RESET</button>
+            </div>
+        </div>
+    </body>
+</html>

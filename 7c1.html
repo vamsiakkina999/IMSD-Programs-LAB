@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Array Methods</title>
+  <script>
+    function runAdvancedArrayOperations() {
+      let numbers = [5, 10, 15, 20, 25];
+
+      // map() - multiply each number by 2
+      let mapped = numbers.map(num => num * 2);
+
+      // filter() - get numbers greater than 10
+      let filtered = numbers.filter(num => num > 10);
+
+      // reduce() - sum of all numbers
+      let total = numbers.reduce((acc, val) => acc + val, 0);
+
+      // sort() - ascending
+      let sorted = [...numbers].sort((a, b) => a - b); // copy first to preserve original
+
+      // Multidimensional array
+      let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ];
+
+      // Convert matrix to string for display
+      let matrixString = matrix.map(row => row.join(" ")).join("<br>");
+
+      // Output
+      document.getElementById("original").innerText = "Original Array: " + numbers;
+      document.getElementById("map").innerText = "Mapped (×2): " + mapped;
+      document.getElementById("filter").innerText = "Filtered (>10): " + filtered;
+      document.getElementById("reduce").innerText = "Reduced (sum): " + total;
+      document.getElementById("sort").innerText = "Sorted (ascending): " + sorted;
+      document.getElementById("matrix").innerHTML = "<strong>3×3 Matrix:</strong><br>" + matrixString;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Advanced Array Methods & Multidimensional Arrays</h2>
+
+  <button onclick="runAdvancedArrayOperations()">Run Advanced Operations</button>
+
+  <p id="original"></p>
+  <p id="map"></p>
+  <p id="filter"></p>
+  <p id="reduce"></p>
+  <p id="sort"></p>
+  <p id="matrix" style="color: darkblue;"></p>
+
+</body>
+</html>

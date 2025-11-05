@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Methods in JavaScript</title>
+  <script>
+    // Method 1: prompt() - Takes input using a dialog box
+    function takePromptInput() {
+      let name = prompt("Enter your name:");
+      alert("Hello, " + name + "! (from prompt input)");
+    }
+    // Method 2: Using HTML input element and get value using DOM
+    function takeFormInput() {
+      let userInput = document.getElementById("textInput").value;
+      document.getElementById("formOutput").innerHTML = "You entered: " + userInput + " (from input field)";
+    }
+    
+  </script>
+</head>
+<body>
+
+  <h2>JavaScript Input Methods</h2>
+  <!-- Method 1: prompt() -->
+  <button onclick="takePromptInput()">Take Input using prompt()</button><br><br>
+  <!-- Method 2: Input field + DOM access -->
+  <label>Enter something:</label>
+  <input type="text" id="textInput">
+  <button onclick="takeFormInput()">Submit</button>
+  <p id="formOutput" style="color: blue;"></p>
+</body>
+</html>
